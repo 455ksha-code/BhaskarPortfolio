@@ -949,7 +949,11 @@ body {
     .footer-links {
         gap: 15px;
     }
-
+   .contact-box p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    }
+   
 }
 /* Instagram Logo */
 .instagram-heading img {
