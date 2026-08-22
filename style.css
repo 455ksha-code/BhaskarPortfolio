@@ -1,0 +1,960 @@
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0a08;
+    color: #f5eadc;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #090705;
+    border-bottom: 1px solid #241a14;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #c96f32;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c96f32;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 10%;
+    box-sizing: border-box;
+}
+
+.hero img {
+    width: 320px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #4a3022;
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.hero-label {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #c96f32;
+    margin-bottom: 15px;
+}
+
+.work-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    border: 1px solid #c96f32;
+    border-radius: 5px;
+    color: #c96f32;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.work-button:hover {
+    background-color: #c96f32;
+    color: #0d0a08;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    min-height: 60vh;
+    padding: 70px 10%;
+    box-sizing: border-box;
+    border-top: 1px solid #241a14;
+}
+
+.about h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-highlights span {
+    border: 1px solid #63412d;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.about-highlights span:hover {
+    border-color: #c96f32;
+    color: #c96f32;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+    min-height: 60vh;
+    padding: 70px 10%;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #241a14;
+}
+
+.profile h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.profile .section-intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.profile-details {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.profile-card {
+    padding: 30px;
+    border: 1px solid #493024;
+    border-radius: 12px;
+    background-color: #17100c;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-6px);
+    border-color: #c96f32;
+}
+
+.profile-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.profile-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.profile-card strong {
+    color: #f5eadc;
+}
+
+
+/* =========================
+   WORK
+========================= */
+
+.work {
+    min-height: 55vh;
+    padding: 70px 10%;
+    box-sizing: border-box;
+    border-top: 1px solid #241a14;
+    text-align: center;
+}
+
+.work h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.work .section-intro {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.work-content {
+    max-width: 700px;
+    margin: auto;
+    padding: 45px;
+    border: 1px solid #493024;
+    border-radius: 12px;
+    background-color: #17100c;
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.work-content:hover {
+    transform: translateY(-6px);
+    border-color: #c96f32;
+}
+
+.work-content h3 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.work-list {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.work-list li {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 8px;
+}
+
+.work-list li::marker {
+    color: #c96f32;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .work {
+        padding: 80px 20px;
+    }
+
+    .work h2 {
+        font-size: 36px;
+    }
+
+    .work-content {
+        padding: 30px 25px;
+    }
+
+    .work-list li {
+        font-size: 16px;
+    }
+
+}
+
+/* =========================
+   YOUTUBE SHORT FILMS
+========================= */
+
+.youtube-work-title {
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: 35px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.youtube-work-intro {
+    max-width: 700px;
+    margin: -20px auto 35px;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+.youtube-work-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.youtube-work-card {
+    overflow: hidden;
+    border: 1px solid #493024;
+    border-radius: 12px;
+    background-color: #17100c;
+    text-align: left;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.youtube-work-card:hover {
+    transform: translateY(-7px);
+    border-color: #c96f32;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.youtube-work-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.youtube-work-content {
+    padding: 22px;
+}
+
+.youtube-work-content h3 {
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.youtube-work-content a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #c96f32;
+    border-radius: 5px;
+    color: #c96f32;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.youtube-work-content a:hover {
+    background-color: #c96f32;
+    color: #0d0a08;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    min-height: 70vh;
+    padding: 100px 7%;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #241a14;
+}
+
+.gallery h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+.gallery-container img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    min-height: 45vh;
+    padding: 100px 7%;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #241a14;
+}
+
+.skills h2 {
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.skills-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.skill-card {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    border: 1px solid #493024;
+    border-radius: 12px;
+    background-color: #17100c;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #c96f32;
+}
+
+.skill-card h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #c96f32;
+}
+
+.skill-card p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram-section {
+    min-height: 55vh;
+    padding: 70px 10%;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #241a14;
+}
+
+.instagram-section h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.instagram-content {
+    max-width: 750px;
+    margin: 50px auto 0;
+    padding: 50px 40px;
+    border: 1px solid #493024;
+    border-radius: 12px;
+    background-color: #17100c;
+}
+
+.instagram-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.instagram-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 15px 20px;
+    border: 1px solid #c96f32;
+    border-radius: 10px;
+    color: #c96f32;
+    margin-bottom: 20px;
+}
+
+.instagram-content .instagram-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 25px;
+    border: 1px solid #c96f32;
+    border-radius: 5px;
+    color: #c96f32;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.instagram-content .instagram-button:hover {
+    background-color: #c96f32;
+    color: #0d0a08;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    min-height: 60vh;
+    padding: 70px 10%;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #241a14;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact > p {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-options {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+    border: 1px solid #493024;
+    border-radius: 12px;
+    background-color: #17100c;
+    box-sizing: border-box;
+}
+
+.contact-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    line-height: 1.7;
+}
+
+.instagram-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    border: 1px solid #c96f32;
+    border-radius: 5px;
+    color: #c96f32;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.instagram-button:hover {
+    background-color: #c96f32;
+    color: #0d0a08;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 50px 20px 30px;
+    text-align: center;
+    border-top: 1px solid #241a14;
+    background-color: #090705;
+}
+
+.footer h3 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #c96f32;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer p {
+    opacity: 0.7;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #c96f32;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    margin-top: 25px;
+    opacity: 0.5;
+}
+
+
+/* =========================
+   IMAGE POPUP
+========================= */
+
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 11, 20, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero-text {
+    animation: fadeUp 1s ease;
+}
+
+.about-content {
+    animation: fadeUp 1s ease;
+}
+
+.work-container {
+    animation: fadeUp 1s ease;
+}
+
+.profile-details {
+    animation: fadeUp 1s ease;
+}
+
+.gallery-container {
+    animation: fadeUp 1s ease;
+}
+
+.skills-container {
+    animation: fadeUp 1s ease;
+}
+
+.contact-options {
+    animation: fadeUp 1s ease;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        padding: 18px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 10px 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        gap: 35px;
+        padding: 70px 20px;
+    }
+
+    .hero img {
+        width: min(260px, 80vw);
+        height: 350px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    /* About */
+
+    .about {
+        padding: 80px 20px;
+    }
+
+    .about h2 {
+        font-size: 36px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-highlights {
+        justify-content: center;
+    }
+
+
+    /* Profile */
+
+    .profile {
+        padding: 80px 20px;
+    }
+
+    .profile h2 {
+        font-size: 36px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Work */
+
+    .work {
+        padding: 80px 20px;
+    }
+
+    .work h2 {
+        font-size: 36px;
+    }
+
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Gallery */
+
+    .gallery {
+        padding: 80px 20px;
+    }
+
+    .gallery h2 {
+        font-size: 36px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 420px;
+    }
+
+
+    /* Skills */
+
+    .skills {
+        padding: 80px 20px;
+    }
+
+    .skills h2 {
+        font-size: 36px;
+    }
+
+
+    /* Instagram */
+
+    .instagram-section {
+        padding: 80px 20px;
+    }
+
+    .instagram-section h2 {
+        font-size: 36px;
+    }
+
+    .instagram-content {
+        padding: 40px 20px;
+    }
+
+
+    /* Contact */
+
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    .contact-options {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 50px 20px 30px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+}
+/* Instagram Logo */
+.instagram-heading img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 7px;
+}
